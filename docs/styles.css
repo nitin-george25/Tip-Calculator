@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+* {
+    scrollbar-width: none;
+    font-family: 'Space Mono', monospace;
+}
+
+html {
+    background: hsl(185, 41%, 84%);
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 22% 95% 1%;
+    grid-template-areas: "logo" "container" "footer";
+    margin: 0;
+}
+
+.container {
+    grid-area: container;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 65% 35%;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px 15px 0 0;
+    font-size: 10px;
+}
+
+.logo {
+    grid-area: logo;
+    margin: auto auto;
+    padding-top: .75rem;
+}
+
+.input {
+    display: grid;
+    grid-template-rows: 12% 10% 12% 38% 12% 10%;
+}
+
+.heading {
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    margin: 1rem 1rem;
+    padding-bottom: 2px;
+}
+
+.currency {
+    flex: 1;
+    display: flex;
+    background: hsl(189, 41%, 97%);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    font-size: 16px;
+    color: hsl(184, 14%, 56%);
+}
+
+.currency:hover {
+    cursor: pointer;
+    outline: ridge;
+    outline-color: hsl(172, 67%, 45%);
+    outline-width: 1px;
+}
+
+#bill-amnt {
+    height: 24px;
+    width: 95%;
+    text-align: right;
+    -moz-appearance: textfield;
+    border: none;
+    background: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#bill-amnt:hover {
+    cursor: pointer;
+}
+
+.symbol {
+    background: inherit;
+    padding-left: 10px;
+    height: 10px;
+    width: auto;
+}
+
+#bill-amnt:focus {
+    outline: none;
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: .5rem;
+    margin: .25rem 1rem;
+    font-weight: 700;
+}
+
+.tip-btn {
+    background: hsl(183, 100%, 15%);
+    border: none;
+    color: hsl(189, 41%, 97%);
+    border-radius: .25rem;
+}
+
+.tip-btn:active,
+.tip-btn:focus {
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tips input {
+    -moz-appearance: textfield;
+    min-width: 0;
+    background: hsl(189, 41%, 97%);
+    border: none;
+    text-align: center;
+    font-weight: 700;
+}
+
+.count {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-areas: "no-of-ppl err-msg" "input input";
+}
+
+.no-of-ppl {
+    grid-area: no-of-ppl;
+}
+
+.err-msg {
+    display: none;
+    grid-area: err-msg;
+}
+
+#no-ppl {
+    height: 24px;
+    width: 95%;
+    text-align: right;
+    -moz-appearance: textfield;
+    border: none;
+    background: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+}
+
+#no-ppl:focus {
+    outline: none;
+}
+
+#no-ppl:hover {
+    cursor: pointer;
+}
+
+.output {
+    background: hsl(183, 100%, 15%);
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas: "tip-amnt result" "tip-amnt result" "reset reset";
+    border-radius: 10px;
+}
+
+.output h1 {
+    margin: 0;
+}
+
+.tip-amnt {
+    margin: 0;
+}
+
+.tip-amnt h3 {
+    margin: 1rem 1rem 0 1rem;
+    color: hsl(189, 41%, 97%);
+    font-weight: 400;
+}
+
+.tip-amnt p {
+    margin: 0 1rem;
+    color: hsl(185, 41%, 84%);
+}
+
+.reset {
+    grid-area: reset;
+    height: 25%;
+    margin: 25% 1rem 1rem 1rem;
+    border: none;
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.reset:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+.result {
+    display: grid;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 1rem 0 0;
+    justify-content: right;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 375px) {
+    body {
+        grid-template-rows: 30% 50% 20%;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        background: hsl(0, 0%, 100%);
+        border-radius: 15px;
+        font-size: 10px;
+    }
+    .input {
+        flex: 1;
+        height: 95%;
+        display: grid;
+        grid-template-rows: 10% 12% 10% 40% 10% 12%;
+    }
+    .output {
+        flex: 1;
+        height: 90%;
+        margin-right: 1rem;
+    }
+    .heading {
+        margin: 0.5rem 1rem;
+    }
+    .no-of-ppl {
+        margin-right: 0;
+    }
+    .err-msg {
+        display: block;
+        color: red;
+        margin-left: 0;
+        text-align: right;
+    }
+}
+
+.attribution {
+    grid-area: footer;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
