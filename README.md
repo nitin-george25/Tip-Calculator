@@ -1,6 +1,6 @@
-# Frontend Mentor: 3-column preview card component solution
+# Frontend Mentor: Tip-Calculator
 
-This is a solution to the 3-column preview card component challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the Tip-Calculator challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -9,17 +9,13 @@ This is a solution to the 3-column preview card component challenge on Frontend 
   - Links
   - Built with
   - What I learned
-  - Useful resources
   - Author
-  - Acknowledgments
 
 ## Overview
 
 Explore CSS Grids, grid-template-columns, grid-template-rows and grid-template-areas.
 Basic fundamentals of HTML, CSS and Javascript.
 Roadmap to expertise in Frontend Development.
-
-### The challenge
 
 Users should be able to:
 
